@@ -8,6 +8,7 @@ public class Utilities
     public static Vector3 Wrap(Vector3 v, Vector3 min, Vector3 max)
     {
         Vector3 result = v;
+
         if (result.x > max.x) { result.x = min.x; }
         else if (result.x < min.x) { result.x = max.x; }
 
@@ -20,16 +21,8 @@ public class Utilities
         return result;
     }
 
-
-    // Start is called before the first frame update
-    void Start()
+    public static Vector3 ClampMagnitude(Vector3 v, float min, float max)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return v.normalized * Mathf.Clamp(v.magnitude, min, max);
     }
 }

@@ -723,6 +723,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perception: {fileID: 1305159510}
   movement: {fileID: 1305159511}
+  wanderDistance: 1
+  wanderRadius: 3
+  wanderDisplacement: 5
 --- !u!4 &1305159513
 Transform:
   m_ObjectHideFlags: 0
